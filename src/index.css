@@ -15,12 +15,13 @@ code {
     monospace;
 }
 
+/* =============================== */
 /* added styles */
+/* =============================== */
 h1 {
   color: #11647d;
   font-family: "Great Vibes", cursive;
   font-size: 4rem ;
-  /* line-height: 160px;  */
   font-weight: normal;
   margin-bottom: 0px;
   margin-top: 40px;
@@ -32,19 +33,16 @@ h2 {
   color: #11647d;
   font-family: "Great Vibes", cursive;
   font-size: 2rem !important;
-  /* line-height: 160px;  */
   font-weight: normal;
   margin-bottom: 0px;
   margin-top: 40px;
   text-align: center;
   text-shadow: 0 1px 1px #fff;
   padding: 2rem;
-  
 }
 .box{
   border:5px solid black;
 }
-
 .task-form{
   border:1px solid #11647d;
   border-radius: 1%;
@@ -72,11 +70,9 @@ padding:.5rem;
 .btn-delete-all{
   display: flex;
   justify-content: flex-end;
-  
 }
 .single-todo-name{
   background-color: #e9ecef !important;
   border: 1px solid #ced4da !important;
   padding:.5rem !important;
-  
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Todo from "./Todo";
-// import { Row } from "react-bootstrap";
+
 export default function TodoList({ todos, toggleTodo, deleteTodo }) {
   return todos.map(todo => {
     return (

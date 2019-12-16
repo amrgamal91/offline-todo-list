@@ -22,10 +22,7 @@ export default function Todo({ todo, toggleTodo, deleteTodo, completed }) {
               onChange={handleTodoClick}
             />
           </InputGroup.Prepend>
-          {/* <InputGroup.Text readOnly> {todo.name}</InputGroup.Text> */}
           <Form.Control className="single-todo-name" plaintext readOnly value={todo.name} />
-          {/* <Form.Label>{todo.name}</Form.Label> */}
-
           <InputGroup.Append>
             {!completed && (
               <Button onClick={handleDeleteClick} size="sm" variant="danger">

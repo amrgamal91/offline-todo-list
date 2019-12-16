@@ -48,6 +48,7 @@ function App() {
     );
   }, [completedTodos]);
 
+
   function handleAddTodo(e) {
     const taskName = todoNameRef.current.value;
     if (taskName === "") return;
@@ -81,7 +82,6 @@ function App() {
         todo => todo.id !== todoObject.id
       );
       setcompletedTodos(newCompletedTodos);
-
       const newTodos = [...todos, completedTodo];
       settodos(newTodos);
     }
