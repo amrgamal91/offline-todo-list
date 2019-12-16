@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-![Alt text](./background-1.jpg?raw=true "Optional Title")
+![app-screenshot](/background-1.jpg "App screenshot")
 ## Available Scripts
 
 In the project directory, you can run:
