@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(./background-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* added styles */
+h1 {
+  color: #11647d;
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem ;
+  /* line-height: 160px;  */
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+  padding: 2rem;
+}
+h2 {
+  color: #11647d;
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem !important;
+  /* line-height: 160px;  */
+  font-weight: normal;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  text-align: center;
+  text-shadow: 0 1px 1px #fff;
+  padding: 2rem;
+  
+}
+.box{
+  border:5px solid black;
+}
+
+.task-form{
+  border:1px solid #11647d;
+  border-radius: 1%;
+  padding:1rem;
+  background:rgba(60, 60, 56, 0.7);
+  margin:1rem;
+}
+.task-form-completed{
+  border:1px solid #11647d;
+  border-radius: 1%;
+  padding:1rem;
+  background:rgba(60, 60, 56, 0.7);
+  margin:1rem;
+  padding:2rem;
+  text-decoration: line-through;
+}
+.seprator{
+  display: inline-flex;
+  align-items: center;
+  width:100%;
+}
+.done-title{
+padding:.5rem;
+}
+.btn-delete-all{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.single-todo-name{
+  background-color: #e9ecef !important;
+  border: 1px solid #ced4da !important;
+  padding:.5rem !important;
+  
+}
