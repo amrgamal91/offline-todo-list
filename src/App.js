@@ -137,10 +137,10 @@ function App() {
 
             <Row>
               <div className="seprator">
-                <Col md={6} lg={6}>
+                <Col md={6} lg={6} className="done-col">
                   <h2 className="done-title">Done</h2>
                 </Col>
-                <Col md={6} lg={6}>
+                <Col md={6} lg={6} className="deleteAll-col">
                   <Button
                     onClick={deleteCompletedTasks}
                     size="sm"
