@@ -66,6 +66,7 @@ h2 {
 }
 .done-title{
 padding:.5rem;
+align-items: center;
 }
 .btn-delete-all{
   display: flex;

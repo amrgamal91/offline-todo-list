@@ -22,6 +22,9 @@ function App() {
   const [completedTodos, setcompletedTodos] = useState([]);
   const todoNameRef = useRef();
 
+  /**
+   * set/get todo items in local storage 
+   */
   useEffect(() => {
     const storedTodos = JSON.parse(
       localStorage.getItem(LOCAL_STORAGE_KEY_TODOS)
@@ -29,11 +32,17 @@ function App() {
     if (storedTodos) settodos(storedTodos);
   }, []);
 
+  /**
+   * updating the todo items in local storage when changes
+   */
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY_TODOS, JSON.stringify(todos));
     // console.log("here is the todo item : "+JSON.stringify(todos));
   }, [todos]);
 
+  /**
+   * set/get completed todo items in local stroage
+   */
   useEffect(() => {
     const storedCompletedTodos = JSON.parse(
       localStorage.getItem(LOCAL_STORAGE_KEY_COMPLETED_TODOS)
@@ -41,6 +50,9 @@ function App() {
     if (storedCompletedTodos) setcompletedTodos(storedCompletedTodos);
   }, []);
 
+  /**
+   * upadate completed todo items in local storage when changed
+   */
   useEffect(() => {
     localStorage.setItem(
       LOCAL_STORAGE_KEY_COMPLETED_TODOS,
@@ -49,6 +61,11 @@ function App() {
   }, [completedTodos]);
 
 
+  /**
+   * handle + button click :
+   * update current todos by adding the new one to all todolist then , 
+   * clear the input
+   */
   function handleAddTodo(e) {
     const taskName = todoNameRef.current.value;
     if (taskName === "") return;
@@ -58,6 +75,14 @@ function App() {
     todoNameRef.current.value = null;
   }
 
+  /**
+   * there are 2 cases to handle toggle : 
+   * 1- if check (mark item to be completed):
+   *    set the complete flag then add it to completed list
+   * 2- if check (remark item to be not completed):
+   *    change the complete flag then add it to normal list
+   * @param {todo object to be handled} todoObject 
+   */
   function handleToggle(todoObject) {
     // console.log("todo obj : "+ JSON.stringify(todoObject));
     if (!todoObject.complete) {
@@ -87,10 +112,17 @@ function App() {
     }
   }
 
+  /**
+   * clear all completed tasks
+   */
   function deleteCompletedTasks() {
     setcompletedTodos([]);
   }
 
+  /**
+   * delete one task from list
+   * @param {id of task to be deleted} id 
+   */
   function deleteSingleTask(id) {
     let newTodos = [...todos];
     newTodos = newTodos.filter(item => item.id !== id);
