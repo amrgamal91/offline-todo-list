@@ -70,6 +70,7 @@ padding:.5rem;
 .btn-delete-all{
   display: flex;
   justify-content: flex-end;
+  padding:1rem;
 }
 .single-todo-name{
   background-color: #e9ecef !important;
