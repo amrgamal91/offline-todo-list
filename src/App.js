@@ -17,10 +17,7 @@ import {
 //google Analytics
 import ReactGA from "react-ga";
 
-// function initializeReactGA() {
-ReactGA.initialize("UA-156602041-1");
 
-ReactGA.pageview("/");
 
 
 
@@ -29,6 +26,8 @@ const LOCAL_STORAGE_KEY_TODOS = "todoApp.todos";
 const LOCAL_STORAGE_KEY_COMPLETED_TODOS = "todoApp.todos.completed";
 
 function App() {
+  ReactGA.initialize("UA-156602041-1");
+  ReactGA.pageview("/");
   const [todos, settodos] = useState([]);
   const [completedTodos, setcompletedTodos] = useState([]);
   const todoNameRef = useRef();
